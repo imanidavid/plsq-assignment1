@@ -17,24 +17,24 @@ Develop a comprehensive coffee analytics system that identifies top-performing c
 
 # Success Criteria Mapped to Window Functions
 
-# 1. Top 5 Cooperatives per Region/Season → RANK()
+## 1. Top 5 Cooperatives per Region/Season → RANK()
 Goal: Identify highest-performing cooperatives by coffee volume and quality score within each region and harvest season
 Business Value: Focus premium support and resources on top producers
 
-# 2. Running Seasonal Production Totals → SUM() OVER()
+## 2. Running Seasonal Production Totals → SUM() OVER()
 Goal: Track cumulative coffee production (kg) throughout each harvest season by region
 Business Value: Monitor production progress and identify potential shortfalls early
 
 
-# 3. Season-over-Season Growth Analysis → LAG()/LEAD()
+## 3. Season-over-Season Growth Analysis → LAG()/LEAD()
 Goal: Calculate percentage changes in production volume and average prices between harvest seasons
 Business Value: Identify growth trends and plan capacity investments
 
-# 4. Farmer Performance Quartiles → NTILE(4)
+## 4. Farmer Performance Quartiles → NTILE(4)
 Goal: Segment farmers into 4 performance tiers based on quality scores and production consistency
 Business Value: Tailor support programs (Premium, Standard, Development, Basic support levels)
 
-# 5. 3-Season Moving Averages → AVG() OVER()
+## 5. 3-Season Moving Averages → AVG() OVER()
 Goal: Calculate rolling averages for production volume, quality scores, and export prices
 Business Value: Smooth out seasonal variations for accurate forecasting and planning
 
