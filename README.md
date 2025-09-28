@@ -51,3 +51,40 @@ SELECT
     ) AS moving_avg_range
 FROM seasonal_export_revenue;
 
+# STEP 3:
+Cooperatives: cooperative_id, cooperative_name, region, established_year, contact_person, phone_number
+Farmers: farmer_id, farmer_name, cooperative_id, region, farm_size_hectares, quality_score, quality_score, certification_level
+Coffee Exports: export_id, farmer_id, cooperative_id, harvest_season, harvest_month, production_kg, export_revenue, price_per_kg, quality_grade
+
+ER DIAGRAM:
+
+# STEP 4:
+*In each file there is comments that describes every working in /SQL/ folder. *
+
+Ranking – Identify top-performing cooperatives by region and revenue
+Aggregate – Running totals & trends in coffee production by season
+Navigation – Season-to-season export revenue growth per cooperative
+Distribution – Segment farmers by quality score and production performance
+
+# STEP 5: Screenshots
+All screenshots are in the /Screenshots/ folder, named by step.
+
+# STEP 6: Results Analysis
+
+## **Descriptive**
+* Top 5 cooperatives account for 65% of total export revenue.
+* Peak export months: April–June (Season A harvests).
+* Season-to-season growth varies; some regions show negative growth during Season B.
+* Farmers divided into quartiles; top quartile produces 60% of quality coffee exports.
+
+## **Diagnostic**
+* High-performing cooperatives have established infrastructure and experienced farmers.
+* Revenue spikes align with international procurement cycles; dips during off-season processing.
+* Growth fluctuations due to seasonal harvest patterns and global coffee price volatility.
+* Quartile distribution shows quality-focused farmers with larger farms dominate export revenues.
+
+## **Prescriptive**
+* Target top-performing cooperatives for expanded partnership agreements and premium contracts.
+* Develop Season B marketing strategies and alternative buyer relationships for off-peak exports.
+* Monitor declining cooperatives and provide targeted training and infrastructure support.
+* Use farmer quartile segmentation for differentiated support programs and quality incentive structures.
