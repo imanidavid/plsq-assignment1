@@ -52,9 +52,9 @@ SELECT
 FROM seasonal_export_revenue;
 
 # STEP 3:
-Cooperatives: cooperative_id, cooperative_name, region, established_year, contact_person, phone_number
-Farmers: farmer_id, farmer_name, cooperative_id, region, farm_size_hectares, quality_score, quality_score, certification_level
-Coffee Exports: export_id, farmer_id, cooperative_id, harvest_season, harvest_month, production_kg, export_revenue, price_per_kg, quality_grade
+* **Cooperatives:** cooperative_id, cooperative_name, region, established_year, contact_person, phone_number
+* **Farmers:** farmer_id, farmer_name, cooperative_id, region, farm_size_hectares, quality_score, quality_score, certification_level
+* **Coffee Exports:** export_id, farmer_id, cooperative_id, harvest_season, harvest_month, production_kg, export_revenue, price_per_kg, quality_grade
 
 ER DIAGRAM:
 
