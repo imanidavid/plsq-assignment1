@@ -34,26 +34,9 @@ Business Value: Identify growth trends and plan capacity investments
 Goal: Segment farmers into 4 performance tiers based on quality scores and production consistency
 Business Value: Tailor support programs (Premium, Standard, Development, Basic support levels)
 
-## 5. 3-Season Moving Averages → AVG() OVER()
-Goal: Calculate rolling averages for production volume, quality scores, and export prices
-Business Value: Smooth out seasonal variations for accurate forecasting and planning
-
-SELECT
-    harvest_season,
-    total_export_revenue,
-    AVG(total_export_revenue) OVER (
-        ORDER BY harvest_season
-        ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
-    ) AS moving_avg_rows,
-    AVG(total_export_revenue) OVER (
-        ORDER BY harvest_season
-        RANGE BETWEEN 2 PRECEDING AND CURRENT ROW
-    ) AS moving_avg_range
-FROM seasonal_export_revenue;
-
 # STEP 3:
 * **Cooperatives:** cooperative_id, cooperative_name, region, established_year, contact_person, phone_number
-* **Farmers:** farmer_id, farmer_name, cooperative_id, region, farm_size_hectares, quality_score, quality_score, certification_level
+* **Farmers:** farmer_id, farmer_name, cooperative_id, region, farm_size_hectares, quality_score, certification_level
 * **Coffee Exports:** export_id, farmer_id, cooperative_id, harvest_season, harvest_month, production_kg, export_revenue, price_per_kg, quality_grade
 
 ER DIAGRAM:
